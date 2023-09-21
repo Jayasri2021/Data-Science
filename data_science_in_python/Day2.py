@@ -45,3 +45,8 @@ print(np.sort(a))
 b = np.array([[3, 2, 1], [6, 5, 4], [8, 7, 9]])
 print(b)
 print(np.sort(b))
+# Reverse of an Array
+a = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+print(a)
+print(np.sort(a))
+print(np.sort(a)[::-1])
