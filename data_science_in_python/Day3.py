@@ -37,3 +37,7 @@ print(df1.loc["Maths"])
 df1.loc["Maths", "Elakiya"]
 Data = pd.read_csv("./Downloads/DS CSV FILE.csv")
 print(Data)
+print(Data.info())
+print(Data.describe)
+print(Data.shape)
+print(Data.head())
