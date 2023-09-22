@@ -22,3 +22,11 @@ ser_2 = pd.Series(dt)
 print(ser_2)
 ser_3 = pd.Series(dt, index=["Maths", "Science", "Social"])
 print(ser_3)
+# Data Frames
+import pandas as pd
+
+dt = {"Elakiya": [34, 67, 89, 45], "vivi": [56, 87, 74, 67]}
+print(dt)
+df = pd.DataFrame(dt)
+print(dt)
+print(type(df))
