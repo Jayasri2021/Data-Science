@@ -52,3 +52,6 @@ print(Data.nunique())
 print(Data["Calories"].count())
 print(Data["Calories"].value_counts())
 print(Data["Pulse"])
+print(Data[Data["Calories"].isna()])
+Data.iloc[Data["Calories"].isna()] = 245
+Data.isna().sum
