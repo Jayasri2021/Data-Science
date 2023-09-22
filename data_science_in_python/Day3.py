@@ -34,3 +34,6 @@ print(df.loc[2])
 df1 = pd.DataFrame(dt, index=["Tamil", "English", "Maths", "Science"])
 print(df1)
 print(df1.loc["Maths"])
+df1.loc["Maths", "Elakiya"]
+Data = pd.read_csv("./Downloads/DS CSV FILE.csv")
+print(Data)
