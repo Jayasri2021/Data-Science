@@ -40,3 +40,11 @@ data = pd.read_csv(
     converters={"Department": lambda x: (x.replace("POLICE", "TRAINER"))},
 )
 print(data)
+# Plots
+from matplotlib import pyplot as plt
+
+data["Department"].value_counts().head().plot(kind="bar")
+dt = pd.read_csv("u.user.csv")
+cols = ["User_id", "Age", "Gender", "Occupation", "Zipcode"]
+dt = pd.read_csv("u.user.col", sep="|", names=cols)
+dt["Gender"].value_counts().head().plot(kind="bar")
