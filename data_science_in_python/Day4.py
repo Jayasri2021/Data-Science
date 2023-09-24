@@ -24,3 +24,6 @@ import pandas as pd
 data = pd.read_csv("city-of-chicago-salaries.csv")
 data
 data.info()
+data.describe
+data.head()
+data.tail()
