@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 
-dt = pd.read_csv("./Downloads/u.user")
+dt = pd.read_csv("u.user")
 cols = ["User_id", "Age", "Gender", "Occupation", "Zipcode"]
-dt = pd.read_csv("./Downloads/u.user", sep="|", names=cols)
+dt = pd.read_csv("u.user", sep="|", names=cols)
 print(dt)
 dt.info()
 dt.describe  # numerics
@@ -17,3 +17,10 @@ dt.iloc[100:110]
 dt.loc[100:110, "Gender"]
 dt.iloc[100:110, 3]
 dt.iloc[100:110, 0:3]
+
+# Converters
+import pandas as pd
+
+data = pd.read_csv("./Downloads/city-of-chicago-salaries.csv")
+data
+data.info()
