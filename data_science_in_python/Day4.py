@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 
-dt = pd.read_csv("u.user")
+dt = pd.read_csv("u.user.csv")
 cols = ["User_id", "Age", "Gender", "Occupation", "Zipcode"]
-dt = pd.read_csv("u.user", sep="|", names=cols)
+dt = pd.read_csv("u.user.csv", sep="|", names=cols)
 print(dt)
 dt.info()
 dt.describe  # numerics
