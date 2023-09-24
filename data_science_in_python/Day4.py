@@ -13,3 +13,5 @@ dt["Gender"].value_counts()
 dt[(dt["Age"] > 30) & (dt["Gender"] == "F")]
 dt[(dt["Age"] > 30) & (dt["Gender"] == "M")]
 dt.loc[100:110]
+dt.iloc[100:110]
+dt.loc[100:110, "Gender"]
