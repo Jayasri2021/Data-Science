@@ -21,6 +21,6 @@ dt.iloc[100:110, 0:3]
 # Converters
 import pandas as pd
 
-data = pd.read_csv("./Downloads/city-of-chicago-salaries.csv")
+data = pd.read_csv("city-of-chicago-salaries.csv")
 data
 data.info()
