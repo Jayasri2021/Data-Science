@@ -10,3 +10,4 @@ dt.describe  # numerics
 dt["Gender"]
 dt.nunique()
 dt["Gender"].value_counts()
+dt[(dt["Age"] > 30) & (dt["Gender"] == "F")]
