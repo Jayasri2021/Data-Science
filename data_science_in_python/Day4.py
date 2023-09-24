@@ -36,7 +36,7 @@ data = pd.read_csv(
 )
 print(data)
 data = pd.read_csv(
-    "./Downloads/city-of-chicago-salaries.csv",
+    "city-of-chicago-salaries.csv",
     converters={"Department": lambda x: (x.replace("POLICE", "TRAINER"))},
 )
 print(data)
