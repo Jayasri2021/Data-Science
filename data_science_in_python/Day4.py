@@ -19,7 +19,6 @@ dt.iloc[100:110, 3]
 dt.iloc[100:110, 0:3]
 
 # Converters
-import pandas as pd
 
 data = pd.read_csv("city-of-chicago-salaries.csv")
 data
@@ -27,3 +26,12 @@ data.info()
 data.describe
 data.head()
 data.tail()
+data.nunique()
+data["Department"].value_counts()
+data["Department"].unique()  # shows only the fields and not the count
+# remove the dollar symbols
+data = pd.read_csv(
+    "city-of-chicago-salaries.csv",
+    converters={"Employee Annual Salary": lambda x: float(x.replace("$", " "))},
+)
+data
