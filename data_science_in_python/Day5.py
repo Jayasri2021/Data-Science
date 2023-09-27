@@ -9,3 +9,7 @@ print(data)
 data.info()
 data.head()
 data.tail()
+data.nunique()
+data["Gender"].value_counts()
+data.dtypes
+data.head()
