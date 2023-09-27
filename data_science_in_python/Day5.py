@@ -41,3 +41,8 @@ import matplotlib.pyplot as plt
 
 AV["ScoreRate"].value_counts().head(10).plot(kind="pie")
 AV["ScoreRate"].value_counts().head(10).plot(kind="hist")
+AV["ScoreRate"].value_counts().head(10).plot(kind="line")
+AV[(AV["Country"] == "India") & (AV["Player"] == "Sachin R Tendulkar")].shape
+AV[
+    (AV["Country"] == "India") & (AV["Player"] == "Sachin R Tendulkar")
+].value_counts().head()
