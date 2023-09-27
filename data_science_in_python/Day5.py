@@ -19,3 +19,6 @@ data.reset_index(inplace=True)
 data.head()
 AV = pd.read_csv("./Downloads/odi-batting.csv")
 AV
+AV.info()
+AV.describe()
+# In[ 24 ] to be entered
