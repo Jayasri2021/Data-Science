@@ -13,3 +13,9 @@ data.nunique()
 data["Gender"].value_counts()
 data.dtypes
 data.head()
+data.set_index("User_id", inplace=True)
+data.head()
+data.reset_index(inplace=True)
+data.head()
+AV = pd.read_csv("./Downloads/odi-batting.csv")
+AV
