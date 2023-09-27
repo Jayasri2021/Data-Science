@@ -21,4 +21,12 @@ AV = pd.read_csv("./Downloads/odi-batting.csv")
 AV
 AV.info()
 AV.describe()
-# In[ 24 ] to be entered
+AV.dtypes
+AV.head()
+AV.tail()
+AV.nunique()
+AV["Player"].value_counts()
+AV["Player"].unique()
+AV[AV["Runs"] > 22]
+AV.loc[100:110, "Country":"URL"]
+AV.iloc[100:110, 3]
