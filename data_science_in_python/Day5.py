@@ -50,3 +50,5 @@ AV[(AV["Player"] == "Sachin R Tendulkar") & (AV["Runs"] >= 100)]
 AV.isna().sum()
 AV[AV["Runs"].isna()]
 AV.iloc[AV["Runs"].isna()] = 300
+AV.isna().sum()
+AV[AV["Runs"].isna()]
