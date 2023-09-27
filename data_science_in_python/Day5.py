@@ -30,3 +30,14 @@ AV["Player"].unique()
 AV[AV["Runs"] > 22]
 AV.loc[100:110, "Country":"URL"]
 AV.iloc[100:110, 3]
+AV["MatchDate"].value_counts()
+min(AV["MatchDate"])
+max(AV["MatchDate"])
+AV["MatchDate"].min()
+AV["MatchDate"].max()
+AV["Country"].nunique()
+AV["Player"].nunique()
+import matplotlib.pyplot as plt
+
+AV["ScoreRate"].value_counts().head(10).plot(kind="pie")
+AV["ScoreRate"].value_counts().head(10).plot(kind="hist")
