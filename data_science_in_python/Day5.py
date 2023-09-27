@@ -17,7 +17,7 @@ data.set_index("User_id", inplace=True)
 data.head()
 data.reset_index(inplace=True)
 data.head()
-AV = pd.read_csv("./Downloads/odi-batting.csv")
+AV = pd.read_csv("odi-batting.csv")
 AV
 AV.info()
 AV.describe()
