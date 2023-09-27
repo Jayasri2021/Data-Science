@@ -46,3 +46,5 @@ AV[(AV["Country"] == "India") & (AV["Player"] == "Sachin R Tendulkar")].shape
 AV[
     (AV["Country"] == "India") & (AV["Player"] == "Sachin R Tendulkar")
 ].value_counts().head()
+AV[(AV["Player"] == "Sachin R Tendulkar") & (AV["Runs"] >= 100)]
+AV.isna().sum()
