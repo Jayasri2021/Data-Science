@@ -37,3 +37,12 @@ AV = pd.merge(movie_ratings, users)
 AV.head()
 data = AV[AV["user_id"] == 100]
 print(data)
+data.set_index("user_id", inplace=True)
+data.head(10)
+x1 = {"x": [21, 22, 23, 34, 25], "y": [31, 32, 33, 34, 35]}
+print(x1)
+x = pd.DataFrame(x1)
+print(x)
+y1 = {"a": [41, 42, 43, 44, 45], "b": [51, 52, 53, 54, 55]}
+y = pd.DataFrame(y1)
+print(y)
