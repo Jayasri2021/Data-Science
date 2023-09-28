@@ -30,3 +30,10 @@ u_data = pd.read_csv(
 )
 movie_ratings = pd.merge(movies, u_data)
 movie_ratings.head(5)
+cols = ["user_id", "age", "gender", "occupation", "zip_code"]
+users = pd.read_csv("./Downloads/u.user", sep="|", names=cols)
+users.head(5)
+AV = pd.merge(movie_ratings, users)
+AV.head()
+data = AV[AV["user_id"] == 100]
+print(data)
