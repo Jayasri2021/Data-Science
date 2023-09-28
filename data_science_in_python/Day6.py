@@ -28,3 +28,5 @@ movies = pd.read_csv(
 u_data = pd.read_csv(
     "u.data", sep="\t", names=["user_id", "movie_id", "ratings", "timestamp"]
 )
+movie_ratings = pd.merge(movies, u_data)
+movie_ratings.head(5)
