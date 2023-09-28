@@ -46,3 +46,5 @@ print(x)
 y1 = {"a": [41, 42, 43, 44, 45], "b": [51, 52, 53, 54, 55]}
 y = pd.DataFrame(y1)
 print(y)
+z = pd.concat([x, y])
+print(z)
