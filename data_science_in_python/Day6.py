@@ -25,3 +25,6 @@ cols1 = ["movie_id", "movie_name", "release_data", "video_release_date", "imdb_u
 movies = pd.read_csv(
     "u.item", sep="|", encoding="latin-1", names=cols1, usecols=range(5)
 )
+u_data = pd.read_csv(
+    "u.data", sep="\t", names=["user_id", "movie_id", "ratings", "timestamp"]
+)
