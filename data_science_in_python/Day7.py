@@ -39,3 +39,5 @@ y = x.groupby("Player")["Runs", "Country"].value_counts()
 x = IPL[(IPL["Country"] == "India") & (IPL["Player"] == "Sachin R Tendulkar")]
 y = x.groupby("MatchDate")["Runs"].sum()
 print(y.head(10))
+IPL["date"] = pd.to_datetime(IPL["MatchDate"])
+IPL["date"].head()
