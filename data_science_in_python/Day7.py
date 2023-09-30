@@ -34,3 +34,8 @@ da.pivot_table(index="Player", values="Runs", aggfunc=np.sum).sort_values(
 x = IPL[IPL["Runs"] == 0]
 y = x.groupby("Player")["Runs", "Country"].value_counts()
 y.sort_values(ascending=False).head(10)
+y = x.groupby("Player")["Runs", "Country"].value_counts()
+
+x = IPL[(IPL["Country"] == "India") & (IPL["Player"] == "Sachin R Tendulkar")]
+y = x.groupby("MatchDate")["Runs"].sum()
+print(y.head(10))
