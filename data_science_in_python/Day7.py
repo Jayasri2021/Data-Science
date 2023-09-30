@@ -30,3 +30,7 @@ da = IPL[IPL["Country"] == "India"]
 da.pivot_table(index="Player", values="Runs", aggfunc=np.sum).sort_values(
     by="Runs", ascending=False
 ).head(10)
+
+x = IPL[IPL["Runs"] == 0]
+y = x.groupby("Player")["Runs", "Country"].value_counts()
+y.sort_values(ascending=False).head(10)
