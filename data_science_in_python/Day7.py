@@ -20,3 +20,7 @@ pd1 = plant_data.pivot_table(index="group", values="weight")
 print(pd1)
 IPL = pd.read_csv("odi-batting.csv")
 print(IPL)
+
+x = IPL[IPL["Country"] == "India"]
+y = x.groupby("Player")["Runs"].count()
+print(y.head())
