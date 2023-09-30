@@ -44,3 +44,10 @@ IPL["date"].head(IPL)["Year"] = IPL["date"].dt.year
 IPL["Day"] = IPL["date"].dt.day
 IPL["Month"] = IPL["date"].dt.month
 IPL[["date", "Year", "Month", "Day"]].head()
+IPL["Month_Name"] = IPL["date"].dt.strftime("%B")
+IPL["Weekday"] = IPL["date"].dt.strftime("%a")
+IPL[["date", "Year", "Month", "Month_Name", "Day", "Weekday"]].head()
+
+x = IPL[(IPL["Country"] == "India") & (IPL["Player"] == "Sachin R Tendulkar")]
+IPL = sachin = x.groupby("Year")["Runs"].sum()
+print(IPL)
