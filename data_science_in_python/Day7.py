@@ -24,3 +24,9 @@ print(IPL)
 x = IPL[IPL["Country"] == "India"]
 y = x.groupby("Player")["Runs"].count()
 print(y.head())
+
+da = IPL[IPL["Country"] == "India"]
+
+da.pivot_table(index="Player", values="Runs", aggfunc=np.sum).sort_values(
+    by="Runs", ascending=False
+).head(10)
