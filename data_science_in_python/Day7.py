@@ -40,4 +40,7 @@ x = IPL[(IPL["Country"] == "India") & (IPL["Player"] == "Sachin R Tendulkar")]
 y = x.groupby("MatchDate")["Runs"].sum()
 print(y.head(10))
 IPL["date"] = pd.to_datetime(IPL["MatchDate"])
-IPL["date"].head()
+IPL["date"].head(IPL)["Year"] = IPL["date"].dt.year
+IPL["Day"] = IPL["date"].dt.day
+IPL["Month"] = IPL["date"].dt.month
+IPL[["date", "Year", "Month", "Day"]].head()
