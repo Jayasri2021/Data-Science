@@ -16,4 +16,4 @@ plant_data = pd.read_csv("./Downloads/PlantGrowth.csv")
 print(plant_data)
 
 pv = plant_data.pivot(index="observation", columns="group", values="weight")
-pv
+print(pv)
