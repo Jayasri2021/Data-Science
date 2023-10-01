@@ -20,22 +20,17 @@ pd1 = plant_data.pivot_table(index="group", values="weight")
 print(pd1)
 IPL = pd.read_csv("odi-batting.csv")
 print(IPL)
-
 x = IPL[IPL["Country"] == "India"]
 y = x.groupby("Player")["Runs"].count()
 print(y.head())
-
 da = IPL[IPL["Country"] == "India"]
-
 da.pivot_table(index="Player", values="Runs", aggfunc=np.sum).sort_values(
     by="Runs", ascending=False
 ).head(10)
-
 x = IPL[IPL["Runs"] == 0]
 y = x.groupby("Player")["Runs", "Country"].value_counts()
 y.sort_values(ascending=False).head(10)
 y = x.groupby("Player")["Runs", "Country"].value_counts()
-
 x = IPL[(IPL["Country"] == "India") & (IPL["Player"] == "Sachin R Tendulkar")]
 y = x.groupby("MatchDate")["Runs"].sum()
 print(y.head(10))
@@ -47,7 +42,6 @@ IPL[["date", "Year", "Month", "Day"]].head()
 IPL["Month_Name"] = IPL["date"].dt.strftime("%B")
 IPL["Weekday"] = IPL["date"].dt.strftime("%a")
 IPL[["date", "Year", "Month", "Month_Name", "Day", "Weekday"]].head()
-
 x = IPL[(IPL["Country"] == "India") & (IPL["Player"] == "Sachin R Tendulkar")]
 IPL = sachin = x.groupby("Year")["Runs"].sum()
 print(IPL)
