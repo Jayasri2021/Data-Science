@@ -56,3 +56,9 @@ sns.boxplot(x="body-style", y="price", data=pg)
 sns.catplot(x="body-style", y="price", hue="engine-type", data=pg)
 
 sns.violinplot(x="engine-type", y="price", hue="num-of-doors", data=pg)
+
+
+# Handling missing values¶
+pg.isna().sum()
+
+sns.heatmap(pg.isnull())
