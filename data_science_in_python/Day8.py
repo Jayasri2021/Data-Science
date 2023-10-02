@@ -20,3 +20,14 @@ plt.scatter(am["engine-size"], am["price"])
 plt.xlabel("Engine Size")
 plt.ylabel("Price")
 print(plt.show())
+
+# Histogram
+count, bin_edges = np.histogram(am["peak-rpm"])
+am["peak-rpm"].plot(kind="hist", xticks=bin_edges)
+plt.xlabel("value pf peak-rpm")
+plt.ylabel("number of cars")
+plt.show()
+
+auto_temp = am[["num-of-doors", "body-style", "price"]]
+auto_group = auto_temp.groupby(["num-of-doors", "body-style"], as_index=False).mean()
+auto_group
