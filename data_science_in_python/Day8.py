@@ -44,12 +44,15 @@ print(pg.shape)
 
 print(pg.nunique())
 
-
 from matplotlib import pyplot as plt
 
 pg["stroke"].value_counts().head().plot(kind="bar")
 
-
 import seaborn as sns
 
 sns.boxplot(x="body-style", y="price", data=pg)
+
+# Handling missing values
+sns.catplot(x="body-style", y="price", hue="engine-type", data=pg)
+
+sns.violinplot(x="engine-type", y="price", hue="num-of-doors", data=pg)
