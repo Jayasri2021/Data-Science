@@ -13,3 +13,10 @@ print(am.shape)
 print(am.describe())
 print(am["num-of-doors"].value_counts())
 sns.boxplot(x="num-of-cylinders", y="price", data=am)
+
+# Scatter Plots
+am["engine-size"].unique()
+plt.scatter(am["engine-size"], am["price"])
+plt.xlabel("Engine Size")
+plt.ylabel("Price")
+print(plt.show())
