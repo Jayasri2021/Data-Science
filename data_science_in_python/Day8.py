@@ -62,3 +62,8 @@ sns.violinplot(x="engine-type", y="price", hue="num-of-doors", data=pg)
 pg.isna().sum()
 
 sns.heatmap(pg.isnull())
+
+pg["stroke"].dtype
+dtype("float64")
+pg["horsepower-binned"].dtype
+dtype("O")
