@@ -64,6 +64,14 @@ pg.isna().sum()
 sns.heatmap(pg.isnull())
 
 pg["stroke"].dtype
-dtype("float64")
 pg["horsepower-binned"].dtype
-dtype("O")
+
+mn = pg["stroke"].mean()
+mn
+pg["stroke"].fillna(mn, inplace=True)
+pg["horsepower-binned"].value_counts()
+
+pg["horsepower-binned"].fillna("Low", inplace=True)
+sns.heatmap(pg.isnull())
+
+pg.isna().sum()
