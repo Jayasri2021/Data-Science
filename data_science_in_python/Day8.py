@@ -31,3 +31,15 @@ plt.show()
 auto_temp = am[["num-of-doors", "body-style", "price"]]
 auto_group = auto_temp.groupby(["num-of-doors", "body-style"], as_index=False).mean()
 auto_group
+
+auto_pivot = auto_group.pivot(index="body-style", columns="num-of-doors")
+auto_pivot
+
+pg = pd.read_csv("automobile.csv")
+print(pg)
+
+print(pg.describe())
+
+print(pg.shape)
+
+print(pg.nunique())
