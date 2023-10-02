@@ -7,4 +7,6 @@ import seaborn as sns
 from scipy import stats
 
 am = pd.read_csv("automobile.csv")
-am.head()
+print(am.head())
+print(am.columns)
+print(am.shape)
