@@ -18,3 +18,7 @@ stats.f_oneway(
 )
 auto = pd.read_csv("automobile.csv")
 auto.head()
+correlation_matrix = auto.corr()
+plt.subplots(figsize=(20, 15))
+sns.heatmap(correlation_matrix, annot=True)
+plt.show()
