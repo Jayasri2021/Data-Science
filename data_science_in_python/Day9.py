@@ -16,3 +16,5 @@ stats.f_oneway(temp_df.get_group("audi")["price"], temp_df.get_group("volvo")["p
 stats.f_oneway(
     temp_df.get_group("jaguar")["price"], temp_df.get_group("honda")["price"]
 )
+auto = pd.read_csv("automobile.csv")
+auto.head()
