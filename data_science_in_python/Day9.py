@@ -10,3 +10,5 @@ auto_temp1 = am[["make", "price"]]
 group1 = auto_temp1.groupby(["make"]).mean().sort_values(ascending=False, by="price")
 print(group1)
 group1.plot.bar()
+temp_df = am[["make", "price"]].groupby(["make"])
+temp_df.head()
