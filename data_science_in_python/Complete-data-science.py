@@ -36,3 +36,7 @@ print(std)
 # Minimum and Maximum
 min(std["mark"])
 max(std["mark"])
+# DataFrames
+std1 = std[std["mark"] == 88]
+print(std1)
+# Groupby:
