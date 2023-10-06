@@ -58,3 +58,7 @@ std["mark"].plot(kind="hist", xticks=bin_edges)
 plt.xlabel("mark")
 plt.ylabel("id")
 plt.show()
+# Grouping of data:
+std_temp = std[["name", "class", "mark"]]
+std_group = std_temp.groupby(["name", "mark"], as_index=False).mean()
+std_group
