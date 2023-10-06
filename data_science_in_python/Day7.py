@@ -12,6 +12,7 @@ data = AV.groupby("Department").count()
 print(data)
 dep_sal = AV.groupby("Department")["Employee Annual Salary"].count()
 print(dep_sal)
+# Pivot
 plant_data = pd.read_csv("PlantGrowth.csv")
 print(plant_data)
 pv = plant_data.pivot(index="observation", columns="group", values="weight")

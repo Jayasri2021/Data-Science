@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+# Merge
 x = pd.DataFrame({"key": range(0, 5), "leftval": [10, 20, 30, 40, 50]})
 print(x)
 y = pd.DataFrame({"key": range(2, 7), "rightval": [60, 70, 80, 90, 100]})
@@ -39,6 +40,7 @@ data = AV[AV["user_id"] == 100]
 print(data)
 data.set_index("user_id", inplace=True)
 data.head(10)
+# Concatenate
 x1 = {"x": [21, 22, 23, 34, 25], "y": [31, 32, 33, 34, 35]}
 print(x1)
 x = pd.DataFrame(x1)
