@@ -40,3 +40,8 @@ max(std["mark"])
 std1 = std[std["mark"] == 88]
 print(std1)
 # Groupby:
+std2 = std.groupby("id")["class"].count()
+print(std2)
+# Pivot
+std3 = std.pivot(index="id", columns="class", values="mark")
+print(std3)
