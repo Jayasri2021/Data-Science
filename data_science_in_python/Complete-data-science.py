@@ -28,3 +28,11 @@ std[(std["mark"] > 85) & (std["gender"] == "female")].value_counts()
 # Plot
 std["gender"].value_counts().plot(kind="bar")
 std["class"].value_counts().plot(kind="pie")
+# Indexing
+std.set_index("mark", inplace=True)
+print(std)
+std.reset_index(inplace=True)
+print(std)
+# Minimum and Maximum
+min(std["mark"])
+max(std["mark"])
