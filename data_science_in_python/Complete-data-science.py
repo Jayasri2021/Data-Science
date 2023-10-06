@@ -23,3 +23,8 @@ std["gender"].count()
 std["class"].value_counts()
 std[std["mark"].isna()] = 20
 print(std)
+std.isna().sum()
+std[(std["mark"] > 85) & (std["gender"] == "female")].value_counts()
+# Plot
+std["gender"].value_counts().plot(kind="bar")
+std["class"].value_counts().plot(kind="pie")
