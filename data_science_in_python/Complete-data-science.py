@@ -45,3 +45,10 @@ print(std2)
 # Pivot
 std3 = std.pivot(index="id", columns="class", values="mark")
 print(std3)
+# Box Plot
+sns.boxplot(x="mark", y="id", data=std)
+# Scatter Plot
+plt.scatter(std["id"], std["mark"])
+plt.xlabel("mark")
+plt.ylabel("id")
+plt.show()
