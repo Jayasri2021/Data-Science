@@ -17,3 +17,9 @@ std.tail(10)
 std.loc[10:30]
 std.iloc[10:30]
 std.loc[10:30, "mark"]
+std.iloc[10:15, 1]
+std.nunique()
+std["gender"].count()
+std["class"].value_counts()
+std[std["mark"].isna()] = 20
+print(std)
