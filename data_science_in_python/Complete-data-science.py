@@ -62,3 +62,12 @@ plt.show()
 std_temp = std[["name", "class", "mark"]]
 std_group = std_temp.groupby(["name", "mark"], as_index=False).mean()
 std_group
+std_pivot = std_group.pivot(index="name", columns="mark")
+std_pivot
+# Catplot:
+sns.catplot(x="id", y="mark", hue="class", data=std)
+# Violin plot
+sns.violinplot(x="id", y="mark", hue="class", data=std)
+# Handling missing values
+std.isna().sum()
+sns.heatmap(std.isnull())
