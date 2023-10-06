@@ -7,3 +7,7 @@ from scipy import stats
 # Reading and working with file: student.csv
 std = pd.read_csv("./student.csv")
 print(std)
+std.info()
+std.describe
+std.shape
+std.head()
