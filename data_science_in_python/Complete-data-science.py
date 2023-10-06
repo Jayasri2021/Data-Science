@@ -5,3 +5,5 @@ import seaborn as sns
 from scipy import stats
 
 # Reading and working with file: student.csv
+std = pd.read_csv("./student.csv")
+print(std)
