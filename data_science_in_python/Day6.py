@@ -24,15 +24,15 @@ x5 = pd.merge(x3, x4, left_on="s_no", right_on="serial_no", how="inner")
 print(x5)
 cols1 = ["movie_id", "movie_name", "release_data", "video_release_date", "imdb_url"]
 movies = pd.read_csv(
-    "u.item", sep="|", encoding="latin-1", names=cols1, usecols=range(5)
+    "./u.item", sep="|", encoding="latin-1", names=cols1, usecols=range(5)
 )
 u_data = pd.read_csv(
-    "u.data", sep="\t", names=["user_id", "movie_id", "ratings", "timestamp"]
+    "./u.data", sep="\t", names=["user_id", "movie_id", "ratings", "timestamp"]
 )
 movie_ratings = pd.merge(movies, u_data)
 movie_ratings.head(5)
 cols = ["user_id", "age", "gender", "occupation", "zip_code"]
-users = pd.read_csv(".u.user", sep="|", names=cols)
+users = pd.read_csv("./u.user", sep="|", names=cols)
 users.head(5)
 AV = pd.merge(movie_ratings, users)
 AV.head()

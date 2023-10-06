@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 
-am = pd.read_csv("automobile.csv")
+
+am = pd.read_csv("./automobile.csv")
 print(am.head())
 print(am.columns)
 print(am.shape)
@@ -35,7 +36,7 @@ auto_group
 auto_pivot = auto_group.pivot(index="body-style", columns="num-of-doors")
 auto_pivot
 
-pg = pd.read_csv("automobile.csv")
+pg = pd.read_csv("./automobile.csv")
 print(pg)
 
 print(pg.describe())
