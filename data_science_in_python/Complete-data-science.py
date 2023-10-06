@@ -71,3 +71,15 @@ sns.violinplot(x="id", y="mark", hue="class", data=std)
 # Handling missing values
 std.isna().sum()
 sns.heatmap(std.isnull())
+std["mark"].dtype
+std1 = std["mark"].mean()
+print(std1)
+std["mark"].value_counts()
+std["mark"].fillna("88", inplace=True)
+# Correlation
+std_temp = std[["mark", "name"]]
+std_group = std_temp.groupby(["mark"]).mean().sort_values(ascending=False, by="mark")
+print(std_group)
+std.plot.bar()
+temp = std[["mark", "class"]].groupby(["mark"])
+temp.head()
