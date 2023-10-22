@@ -57,6 +57,7 @@ count, bin_edges = np.histogram(std["mark"])
 std["mark"].plot(kind="hist", xticks=bin_edges)
 plt.xlabel("mark")
 plt.ylabel("id")
+plt.grid()
 plt.show()
 # Grouping of data:
 std_temp = std[["name", "class", "mark"]]
@@ -78,7 +79,8 @@ std["mark"].value_counts()
 std["mark"].fillna("88", inplace=True)
 # Correlation
 std_temp = std[["mark", "name"]]
-std_group = std_temp.groupby(["mark"]).mean().sort_values(ascending=False, by="mark")
+std_group = std_temp.groupby(["mark"]).mean(
+).sort_values(ascending=False, by="mark")
 print(std_group)
 std.plot.bar()
 temp = std[["mark", "class"]].groupby(["mark"])
